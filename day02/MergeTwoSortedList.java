@@ -2,11 +2,25 @@ package DSA.day02;
 
 public class MergeTwoSortedList extends LinkedLists{
 
-    public Node merge(Node head1, Node head2){
+    public Node merge(Node l1, Node l2){
+        Node dummyNode = new Node(-1);
+        Node currNode = dummyNode;
 
-        
+        while(l1 != null && l2 != null){
 
-        return null;
+            if (l1.data <= l2.data) {
+                currNode.next = l1;
+                l1 = l1.next;
+            } else {
+                currNode.next = l2;
+                l2 = l2.next;
+            }
+            currNode = currNode.next;
+        }
+
+        currNode.next = l1 == null ? l2 : l1;
+
+        return dummyNode.next;
     }
 
     public static void main(String[] args) {
