@@ -1,5 +1,16 @@
 package DSA.day03;
 
+/*
+Time complexity:
+        The time complexity of this solution is O(n), where n is the length of the string.
+        This is because, in the worst case, all characters in the string need to be checked once,
+        so the number of operations is proportional to the length of the string.
+
+Space complexity:
+        The space complexity of this solution is O(1), as no additional data structures are used,
+        and only a constant amount of memory is required for the start and last pointers and a few variables.
+*/
+
 public class validPalindrome {
 
     public boolean checkForPalindrome(String s){
