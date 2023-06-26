@@ -12,7 +12,6 @@ Space complexity:
 */
 
 public class validPalindrome {
-
     public boolean checkForPalindrome(String s){
         if(s.isEmpty()){
             return true;
